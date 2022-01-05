@@ -8,7 +8,7 @@ const setHeader = require('./utils/Midlewares/setHeaders.js');
 require('./db.js');
 
 const server = express();
-
+server.use(express.json())
 server.name = 'API';
 
 server.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));

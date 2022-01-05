@@ -1,10 +1,11 @@
 const {DataTypes} =require ("sequelize");
 
 module.exports = (sequelize) =>{
-    sequelize.define("activities",{
+    return sequelize.define("activities",{
         id:{
-            type: DataTypes.UUID,
-            primaryKey: true
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
         },
         name: {
             type: DataTypes.STRING,
