@@ -17,7 +17,7 @@ server.use(cookieParser());
 server.use(morgan('dev'));
 //Aqui importamos nuestro header
 server.use(setHeader);
-
+//Aqui seteamos nuestra ruta principal.
 server.use('/api', routes);
 
 //Este va a ser nuestro errorHandler

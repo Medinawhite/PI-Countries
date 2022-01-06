@@ -1,5 +1,11 @@
+//Este controller es el que nos hace de intermediario entre las rutas y la api.
+
 const {Countries, Activities } = require("../db.js");
 const {Op} = require("sequelize")
+
+//Aqui creamos las funciones que van hacer las peticiones de nuestras rutas.
+
+//Este trae todos los paises.
 async function getAllCountries(req, res, next)  {
     try {
         const countries = await Countries.findAll()
@@ -9,6 +15,8 @@ async function getAllCountries(req, res, next)  {
     }
 };
 
+//Este trae los paises por query ejem:(?name="Spain")
+//El op lo que hace es traerse operadores de  sequelize(En este caso lo que hace es que el name no tiene que ser exacto)
 async function getByName(req, res, next)  {
 const { name } = req.query;
 try {
@@ -34,7 +42,7 @@ try {
     next(err);
 }
 };
-
+//Trae los paises segun su id por params.
 async function getById (req, res, next) {
     const id = req.params.id.toUpperCase()
     try {
@@ -47,6 +55,8 @@ async function getById (req, res, next) {
         next(error);
     }
 };
+
+//Esta le agrega una actividad a un pais.
 async function addActivityCountries (req, res, next) {
     const {countryId,activityId } = req.params
     const countrie = await Countries.findByPk(countryId)
