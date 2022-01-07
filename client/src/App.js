@@ -1,10 +1,26 @@
+//Aqui vamos a setear nuestras rutas
+
 import './App.css';
-import CountriesCards from './modules/CountriesCards/Index';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import PrincipalPage from "./modules/PricipalPage.js";
+import Home from"./modules/Home.js";
+import Detail from"./modules/Detail.js";
+import CreateActivity from "./modules/CreateActivity.js";
+
+
+
 function App() {
   return (
-    <div className="App">
-      <h1><CountriesCards/></h1>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Switch>
+          <Route exact path="/" component={PrincipalPage}/>
+          <Route exact path="/home" component={Home}/>
+          <Route exact path="/countries/:id" component={Detail}/>
+          <Route exact path="/create" component={CreateActivity}/>
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 
