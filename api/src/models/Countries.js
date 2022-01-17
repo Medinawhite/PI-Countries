@@ -1,8 +1,6 @@
 const { DataTypes } = require('sequelize');
-// Exportamos una funcion que define el modelo
-// Luego le injectamos la conexion a sequelize.
 
-//Aqui cremos los modelos para la posterior creacion de las tablas. En esre caso es el modelo de Actividades.
+//Aqui cremos los modelos para la posterior creacion de las tablas. En esre caso es el modelo de Countries.
 module.exports = (sequelize) => {
   sequelize.define("countries", {
     cca3: {
@@ -24,14 +22,19 @@ module.exports = (sequelize) => {
     continents: {
       type: DataTypes.STRING,
       allowNull: false,
+      
     }, 
     capital: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
       defaultValue: "Not declared",
+        set(value){
+          this.setDataValue('capital', value.join("{}"))
+      }
     },
     subregion: {
       type: DataTypes.STRING,
+      defaultValue: "Not declared",
     },
     area:{
       type: DataTypes.STRING,

@@ -4,11 +4,12 @@ const {Countries, Activities } = require("../db.js");
 const {Op} = require("sequelize")
 
 //Aqui creamos las funciones que van hacer las peticiones de nuestras rutas.
-
 //Este trae todos los paises.
 async function getAllCountries(req, res, next)  {
     try {
-        const countries = await Countries.findAll()
+        const countries = await Countries.findAll({
+            include: Activities
+        })
         res.json( countries.length > 0  ? countries: "No hay paises aun");
     } catch (error) {
         next(error);
@@ -31,9 +32,9 @@ try {
         },
         include: Activities
     });
-    if (!countrieQuery) {
+    if (countrieQuery.length<=0) {
         return res.status(404).json({
-        error: ` no se encuentra ningun Pais con el nombre , ${name}`,
+        error: ` No se encuentra ningun Pais con el nombre , ${name}`,
         });
     }
     res.json(countrieQuery);
@@ -56,20 +57,9 @@ async function getById (req, res, next) {
     }
 };
 
-//Esta le agrega una actividad a un pais.
-async function addActivityCountries (req, res, next) {
-    const {countryId,activityId } = req.params
-    const countrie = await Countries.findByPk(countryId)
-    try {
-        countrie.addActivity(activityId)
-        res.send("Se agrego correctamente" )
-    } catch (error) {
-        next(error);
-    }
-}
+
 module.exports = {
     getById,
     getByName,
     getAllCountries,
-    addActivityCountries
 }
