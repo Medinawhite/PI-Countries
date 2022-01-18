@@ -1,0 +1,57 @@
+.ContainerActivity{
+    display: flex;
+    flex-direction: column;
+    margin-top:30px;
+}
+.ContainerActivity1{
+    display: flex;
+    justify-content: center;
+    margin-top:30px;
+}
+.ContainerActivity2{
+    display: flex;
+    flex-direction: column;
+    border: 3px solid greenyellow;
+    color: greenyellow;
+    width: 500px;
+    box-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 2px 2px 1px rgba(206,89,55,0);
+
+}
+.Creator3{
+    color: greenyellow; 
+    font-size: 14px; 
+    line-height: 14px; 
+    padding: 6px; 
+    border-radius: 11px; 
+    font-family: "Courier New", Courier, monospace; 
+    font-weight: 400; 
+    text-decoration: greenyellow; 
+    background: transparent;
+    box-shadow: rgb(0, 0, 0) 4px 5px 15px 5px; 
+    border: 2px solid greenyellow; 
+}
+.Selector{
+    background-color: black;
+    color: black;
+}
+.btn1{
+    color: greenyellow; 
+    font-size: 14px; 
+    line-height: 14px; 
+    padding: 6px; 
+    border-radius: 11px; 
+    font-family: "Courier New", Courier, monospace; 
+    font-weight: 400; 
+    background: transparent;
+    box-shadow: rgb(0, 0, 0) 4px 5px 15px 5px; 
+    border: 2px solid greenyellow; 
+    margin-bottom:50px;
+    cursor: pointer;
+}
+.btn1:hover{
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 2px 2px 1px rgba(206,89,55,0);
+    color: greenyellow;
+}
+.btn1:active{
+    transform:scale(.9);
+}

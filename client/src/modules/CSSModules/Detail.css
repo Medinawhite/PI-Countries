@@ -1,0 +1,65 @@
+.AllContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    
+}
+.DetailContainer{
+    display: flex;
+    justify-content: space-around;
+}
+.DetailContainer1{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid greenyellow;
+    border-radius: 20px ;
+    color: greenyellow;
+    margin-bottom: 30px;
+    margin-top: 55px;
+    box-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18, 2px 2px 1px rgba(206,89,55,0);
+}
+.ActivityContainer{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid greenyellow;
+    border-radius: 20px ;
+    color: greenyellow;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: auto;
+}
+.image{
+    border: 2px solid greenyellow;
+    width: auto;
+    height: auto;
+}
+.details{
+    display: flex;
+    justify-content: space-around;
+}
+.activity{
+    border: 1px solid greenyellow;
+    padding: 20px;
+}
+h4{
+    font-family: "Courier New", Courier, monospace;
+    font-size: 20px;
+    letter-spacing: 0.4px;
+    word-spacing: 0px;
+    color: #18a300;
+    font-weight: 400;
+    text-decoration: rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: normal;
+    text-transform: none;
+}
+.img1{
+    width: auto;
+    height: auto;
+    margin: 10px;
+    border: 1px solid greenyellow;
+}
+.btncontainer{
+    display: flex;
+    justify-content: space-around;
+}

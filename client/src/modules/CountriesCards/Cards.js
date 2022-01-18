@@ -1,12 +1,15 @@
 import React from 'react';
 import Card from"./Card.js";
+import "../CSSModules/Cards.css"
 
 const Cards = ({countries}) => {
     return(
-        <div className="Cards">
-            {countries.length?(
-                countries.map((e)=>{
+        
+        <div className="cardContainer">
+            {
+                countries?.map((e)=>{
                     return(
+                    
                         <Card
                             key={e.cca3}
                             id={e.cca3}
@@ -16,9 +19,7 @@ const Cards = ({countries}) => {
                         />
                     );
                 })
-            ):(
-                <p>No se pueden mostrar los paises</p>
-            )}
+            }
         </div>
     )
 }

@@ -1,0 +1,14 @@
+.LandingPage{
+    background: url("https://acegif.com/wp-content/gif/outerspace-17.gif") no-repeat center ;
+    background-size: 100%;
+    min-height: 100vh; 
+    content: 100%;
+}
+.imagelink{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:auto;
+    height: center;
+    width: 30%;
+}
