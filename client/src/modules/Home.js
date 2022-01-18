@@ -4,7 +4,6 @@ import {getCountries, filterByRegion, orderBy, filterByActivity} from '../store/
 import Cards from "./CountriesCards/Cards.js"
 import NavBar from "./NavBar.js"
 import Paged from "./Paged.js"
-import "./CSSModules/Home.css"
 
 
 const Home = () =>{

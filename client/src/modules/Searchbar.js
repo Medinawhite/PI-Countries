@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getByName } from "../store/actions/countriesActions";
-import "./CSSModules/Searchbar.css"
 
 
 const SearchBar = () => {
