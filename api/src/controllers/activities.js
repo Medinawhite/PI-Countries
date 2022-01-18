@@ -16,7 +16,7 @@ async function getAllActivities   (req, res, next) {
 
 //Esta agrega acctividades. Si esta creada la actividad le añade el o los paises. Y si la actividad no esta creada la grega con los paises.
 async function addActivity(req, res, next)  {
-    const { name, dificulty, duration, season, img, cca3 } = req.body;
+    const { name, dificulty, duration, seasson, img, cca3 } = req.body;
 try {
     const matchActivity = await Activities.findOne({
     where: {
@@ -33,7 +33,7 @@ try {
         name: name,
         dificulty: dificulty,
         duration: duration,
-        season: season,
+        seasson: seasson,
         img: img,
     });
         const addCountry = await createActivity.addCountries(countrymatch);
