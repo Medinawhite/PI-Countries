@@ -12,7 +12,7 @@ const Home = () =>{
     const [, setOrder]=useState("")
 
     const [currentPage, setCurrentPage]= useState(1);
-    let countriesPerPage = currentPage === 1? 9: 10; 
+    let countriesPerPage = 10; 
     
     const indexLastCountry =currentPage * countriesPerPage;
     const indexFirtsCountry = indexLastCountry -countriesPerPage;
